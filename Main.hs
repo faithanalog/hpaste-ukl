@@ -26,10 +26,11 @@ pasteSizeLimit :: Int64
 pasteSizeLimit = 512000
 
 genPasteName :: StdGen -> String
-genPasteName = take 15
+genPasteName = take pasteLength
              . map (pasteNameChars !!)
              . randomRs (0, length pasteNameChars - 1)
     where pasteNameChars = ['a'..'z'] ++ ['A'..'Z'] ++ ['0'..'9']
+          pasteLength = 15
 
 readPaste :: String -> IO (Maybe Text)
 readPaste x = do
