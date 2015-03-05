@@ -1,4 +1,4 @@
-hpaste
+hpaste-ukl
 ===
 Haskell pastebin style paste site implementation
 
