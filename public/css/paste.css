@@ -1,0 +1,85 @@
+body {
+    background-color: #002B36;
+    color: #839496;
+    font-family: sans-serif;
+    margin: 0px;
+}
+hr.sourceCode {
+     border: 0;
+     height: 1px;
+     color: #839496;
+     background-image: -webkit-linear-gradient(left, rgba(131,148,150,0), rgba(131,148,150,0.75), rgba(131,148,150,0));
+     background-image:    -moz-linear-gradient(left, rgba(131,148,150,0), rgba(131,148,150,0.75), rgba(131,148,150,0));
+     background-image:     -ms-linear-gradient(left, rgba(131,148,150,0), rgba(131,148,150,0.75), rgba(131,148,150,0));
+     background-image:      -o-linear-gradient(left, rgba(131,148,150,0), rgba(131,148,150,0.75), rgba(131,148,150,0));
+}
+.header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    background-color: #00222B;
+    color: #8FBCC8;
+}
+.title {
+    padding: 5px;
+    text-align: center;
+}
+.title h2, .title h3, .title h4 {
+    margin: 4px;
+}
+.title h2 {
+    margin-bottom: 8px;
+}
+
+.menuButtons {
+    background-color: #08323c;
+    padding: 4px;
+    text-align: justify;
+}
+
+.button, .buttonDisabled {
+    padding: 2px;
+}
+
+.button:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.buttonDisabled {
+    color: #255662;
+}
+
+.menuButtons h2 {
+    margin: 0px;
+}
+
+
+textarea {
+	background: transparent;
+	border: 0px;
+	color: #fff;
+	padding: 0px;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin: 0px;
+	width: 80%;
+	height: 100%;
+	font-family: monospace;
+	outline: none;
+	resize: none;
+    font-size: 13px;
+}
+
+#prompt {
+    color: #7d7d7d;
+    z-index: -1000;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 30px; /* 30 to get 20 away from box */
+    font-size: 13px;
+    font-family: monospace;
+    text-align: right;
+}

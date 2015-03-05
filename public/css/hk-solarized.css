@@ -1,0 +1,35 @@
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    border: none;
+    font-size: 13px;
+}
+td.lineNumbers {
+    border-right: 1px solid #839496;
+    text-align: right;
+    color: #839496;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+code.sourceCode, pre.sourceCode, table.sourceCode {
+    background-color: #002B36;
+    color: #839496;
+}
+td.sourceCode {
+    padding-left: 5px;
+}
+code.sourceCode span.kw { color: #859900; font-weight: bold; }  /* Keyword  */
+code.sourceCode span.dt { color: #B58900; }                     /* DataType */
+code.sourceCode span.dv { color: #2AA198; }                     /* DecVal   */
+code.sourceCode span.bn { color: #2AA198; }                     /* BaseN    */
+code.sourceCode span.fl { color: #2AA198; }                     /* Float    */
+code.sourceCode span.ch { color: #6C71C4; }                     /* Char     */
+code.sourceCode span.st { color: #2AA198; }                     /* String   */
+code.sourceCode span.co { color: #586E75; font-style: italic; } /* Comment  */
+code.sourceCode span.ot { color: #268BD2; }                     /* Other    */
+code.sourceCode span.al { color: #DC322F; font-weight: bold; }  /* Alert    */
+code.sourceCode span.fu { color: #268BD2; font-weight: bold; }  /* Function */
+code.sourceCode span.re { }
+code.sourceCode span.er { color: #DC322F; font-weight: bold; }  /* Error    */
