@@ -58,12 +58,8 @@ window.onload = function() {
                 window.location = "/" + res;
             }
         };
-        req.onerror = function() {
-            console.log(req.status);
-        };
         req.open("POST", "/paste", true);
         req.send(code);
-        console.log("LOL");
     });
 
     addClick("newBtn", function() {
