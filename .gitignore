@@ -2,3 +2,5 @@
 dist/
 pastes/
 cabal.sandbox.config
+.stack-work/
+dist-newstyle/

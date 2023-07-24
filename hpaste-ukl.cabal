@@ -19,7 +19,7 @@ executable hpaste-ukl
   main-is:             Main.hs
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.7 && <4.8,
+  build-depends:       base,
                        scotty >= 0.9,
                        wai-middleware-static >= 0.6,
                        http-types,
