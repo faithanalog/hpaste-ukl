@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 
 executable hpaste-ukl
   main-is:             Main.hs
-  -- other-modules:
+  other-modules:       Paste.Views
   -- other-extensions:
   build-depends:       base,
                        scotty >= 0.9,
