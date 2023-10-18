@@ -7,8 +7,8 @@ synopsis:            Paste website in Haskell, themed after hastebin
 -- description:
 license:             MIT
 license-file:        LICENSE
-author:              unknownloner
-maintainer:          unknownloner.online@gmail.com
+author:              art
+maintainer:          artemis@artemis.sh
 -- copyright:
 category:            Web
 build-type:          Simple
