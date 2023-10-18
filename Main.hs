@@ -47,7 +47,8 @@ writeNewPaste p = do
 
     exists <- doesFileExist fname
     if exists then
-        writeNewPaste p -- Generate a new name of the current one exists
+        -- if we picked a name that's already in use, just try again 
+        writeNewPaste p
     else do
         T.writeFile fname p
         return (T.pack name)
@@ -92,13 +93,18 @@ server = do
             html "<h1>Page not found :(</h1>\n"
           upErrTooLarge = do
             status requestEntityTooLarge413
-            html "Paste size greater than 512000 bytes"
+            html $ "Paste size greater than " <> T.pack (show pasteSizeLimit) <> " bytes"
           getPaste = do
             pasteid <- param "paste"
-            --Split file extension from paste name, save extension for highlighting
-            let parts = T.unpack `map` T.split (=='.') pasteid
-                (fname,ftype) = case length parts of
-                                    1 -> (concat parts, "")
-                                    _ -> (concat (init parts), last parts)
-            -- Returns (fileType, pasteContent)
-            (,) ftype <$> liftIO (readPaste (pastesDir ++ fname))
+
+            -- Split file extension from paste name, save extension for highlighting
+            let parts = T.unpack <$> T.split (== '.') pasteid
+                (fname, ftype) =
+                    case parts of
+                        -- No file extension
+                        [fname] -> (fname, "")
+                        -- File extension detected
+                        _ -> (concat (init parts), last parts)
+
+            contents <- liftIO $ readPaste (pastesDir ++ fname)
+            return (ftype, contents)

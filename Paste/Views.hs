@@ -41,9 +41,9 @@ pageHead :: Html
 pageHead = [shamlet|
 <link rel="stylesheet" href="/css/hk-solarized.css">
 <link rel="stylesheet" href="/css/paste.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome-4.3.0.min.css">
 <script src="/js/paste.js">
-<title>Paste</title>
+<title>Paste
 |]
 
 
