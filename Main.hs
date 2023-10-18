@@ -29,7 +29,7 @@ genPasteName :: StdGen -> String
 genPasteName = take pasteLength
              . map (pasteNameChars !!)
              . randomRs (0, length pasteNameChars - 1)
-    where pasteNameChars = ['a'..'z'] ++ ['A'..'Z'] ++ ['0'..'9']
+    where pasteNameChars = "abcdefghjnprsuvwxyz23467"
           pasteLength = 15
 
 readPaste :: String -> IO (Maybe Text)
